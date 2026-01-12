@@ -1,0 +1,135 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: opensans;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root{
+  --main-color: #141517;
+  --secondary-color: #FD6262;
+}
+
+input, textarea, select, button, label, option{
+  font-size: 16px;
+  font-family: opensans;
+}
+
+input::placeholder, textarea::placeholder{
+  font-size: 16px;
+  font-family: opensans;
+}
+
+
+//#region open-sans fonts
+@font-face {
+  font-family: opensans;
+  src: url("./assets/fonts/Open_Sans/static/OpenSans-Light.ttf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: opensans;
+  src: url("./assets/fonts/Open_Sans/static/OpenSans-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: opensans;
+  src: url("./assets/fonts/Open_Sans/static/OpenSans-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: opensans;
+  src: url("./assets/fonts/Open_Sans/static/OpenSans-Bold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: opensans;
+  src: url("./assets/fonts/Open_Sans/static//OpenSans-ExtraBold.ttf");
+  font-weight: 900;
+}
+//#endregion
+
+
+//#region poppins fonts
+@font-face {
+  font-family: poppins;
+  src: url("./assets/fonts/Poppins/Poppins-Thin.ttf");
+  font-weight: 100;
+}
+@font-face {
+  font-family: poppins;
+  src: url("./assets/fonts/Poppins/Poppins-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: poppins;
+  src: url("./assets/fonts/Poppins/Poppins-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: poppins;
+  src: url("./assets/fonts/Poppins/Poppins-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: poppins;
+  src: url("./assets/fonts/Poppins/Poppins-Bold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: poppins;
+  src: url("./assets/fonts/Poppins/Poppins-ExtraBold.ttf");
+  font-weight: 900;
+}
+//#endregion
+
+
+//#region barlow fonts
+@font-face {
+  font-family: barlow;
+  src: url("./assets/fonts/Barlow/Barlow-Thin.ttf");
+  font-weight: 100;
+}
+@font-face {
+  font-family: barlow;
+  src: url("./assets/fonts/Barlow/Barlow-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: barlow;
+  src: url("./assets/fonts/Barlow/Barlow-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: barlow;
+  src: url("./assets/fonts/Barlow/Barlow-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: barlow;
+  src: url("./assets/fonts/Barlow/Barlow-Bold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: barlow;
+  src: url("./assets/fonts/Barlow/Barlow-ExtraBold.ttf");
+  font-weight: 900;
+}
+//#endregion
+
+
+//#region halvetica fonts
+@font-face {
+  font-family: halvetica;
+  src: url("./assets/fonts/Halvetica/Helvetica.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: halvetica;
+  src: url("./assets/fonts/Halvetica/Helvetica-Bold.ttf");
+  font-weight: 600;
+}
+//#endregion
+
+
