@@ -1,0 +1,159 @@
+@keyframes toTop {
+  to{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes toRight {
+  to{
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@media screen and (min-width: 300px) {
+  .hero{
+    height: 110svh;
+    &__main-container{
+      width: 100%;
+      height: 100%;
+      background-image: url('../../../assets/homepage-wallpaper.avif');
+      background-position-y: 40%;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+    &__text-container{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+    &__heading{
+      font-family: poppins;
+      font-weight: 400;
+      text-align: center;
+      font-size: 28px;
+      line-height: 32px;
+      width: 270px;
+
+      //animation styles
+      transform: translateY(300%);
+      opacity: 0;
+      animation-delay: 1.8s;
+    }
+    &__content{
+      text-align: center;
+      width: 250px;
+
+      //animation styles
+      transform: translateY(300%);
+      opacity: 0;
+      animation-delay: 2.1s;
+    }
+    &__learn-button{
+      font-size: 14px;
+      color: black;
+      background-color: var(--secondary-color);
+      border: 1px solid var(--secondary-color);
+      border-radius: 5px;
+      padding: 12px 20px;
+      cursor: pointer;
+      transition: .4s;
+
+      //animation styles
+      transform: translateY(300%);
+      opacity: 0;
+      animation-delay: 2.3s;
+      &:hover{
+        border: 1px solid white;
+        background-color: var(--main-color);
+        color: white;
+        transition: .4s;
+      }
+    }
+  }
+
+  .fade-up{
+    animation-name: toTop;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero{
+    &__heading{
+      font-family: poppins;
+      font-weight: 400;
+      text-align: center;
+      font-size: 42px;
+      line-height: 50px;
+      width: 400px;
+    }
+    &__content{
+      width: 300px;
+      font-size: 20px;
+    }
+    &__learn-button{
+      font-size: 16px;
+    }
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .hero{
+    height: 140vh;
+    &__main-container{
+      width: 100%;
+      height: 100%;
+      background-image: url('../../../assets/homepage-wallpaper.avif');
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position-y: 30%;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 170px 70px 0;
+    }
+    &__text-container{
+      width: unset;
+      align-items: flex-start;
+      gap: 25px;
+    }
+    &__heading{
+      text-align: start;
+      font-size: 80px;
+      width: 800px;
+      line-height: 100px;
+      animation-delay: 1.8s;
+      transform: translateX(-40%);
+    }
+    &__content{
+      text-align: start;
+      font-size: 30px;
+      width: 450px;
+      animation-delay: 2.0s;
+      transform: translateX(-40%);
+    }
+    &__learn-button{
+      margin-top: 30px;
+      padding: 16px 24px;
+      animation-delay: 2.2s;
+      transform: translateX(-100%);
+    }
+  }
+
+  .fade-up{
+    animation-name: toRight;
+    animation-duration: 1.1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;    
+  }
+}

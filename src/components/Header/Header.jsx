@@ -37,7 +37,7 @@ function Header(){
       <div ref={menu} className='header__mobile-menu'>
         <i onClick={hideMenu} className="fa-solid fa-xmark header__xmark"></i>
         <div className="header__login-container">
-          <i class="fa-solid fa-circle-user header__user-icon"></i>
+          <i className="fa-solid fa-circle-user header__user-icon"></i>
           <span className='header__login-text'>Log In</span>
         </div>
         <nav className='header__mobile-nav'>

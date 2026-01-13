@@ -6,7 +6,7 @@ function Footer(){
   return (
     <footer className="footer">
       <div className="footer__grid-container">
-        <div className="footer__grid-child">
+        <div className="footer__grid-child footer__grid-child--first">
           <div className="footer__logo-container">
             <img className='footer__logo-image' src={Logo2} alt="" />
             <span className='footer__logo-name'>VISTA.IO</span>
@@ -18,7 +18,7 @@ function Footer(){
             <li className='footer__address-li'>San Francisco, CA 94158</li>
           </ul>
         </div>
-        <div className='footer__grid-child'>
+        <div className='footer__grid-child footer__grid-child--second'>
           <nav className='footer__nav'>
             <ul className='footer__navigation-ul'>
               <li className='footer__navigation-li'>Solutions</li>
@@ -29,7 +29,7 @@ function Footer(){
             </ul>
           </nav>
         </div>
-        <div className="footer__grid-child">
+        <div className="footer__grid-child footer__grid-child--third">
           <form className='footer__form'>
             <p className='footer__form-heading'>Subscribe to Our Newsletter</p>
             <div className='footer__input-container'>
@@ -47,9 +47,9 @@ function Footer(){
           <div className='footer__links-outer-container'>
             <span className='footer__follow-text'>Follow Us On:</span>
             <div className='footer__links-inner-container'>
-              <a className='footer__link' href="https://www.linkedin.com/company/wix-com/" target='_blank'><i class="fa-brands fa-linkedin-in footer__link-icon"></i></a>
-              <a className='footer__link' href="https://www.facebook.com/wix" target='_blank'><i class="fa-brands fa-facebook-f footer__link-icon"></i></a>
-              <a className='footer__link' href="https://x.com/wix" target='_blank'><i class="fa-brands fa-twitter footer__link-icon"></i></a>
+              <a className='footer__link' href="https://www.linkedin.com/company/wix-com/" target='_blank'><i className="fa-brands fa-linkedin-in footer__link-icon"></i></a>
+              <a className='footer__link' href="https://www.facebook.com/wix" target='_blank'><i className="fa-brands fa-facebook-f footer__link-icon"></i></a>
+              <a className='footer__link' href="https://x.com/wix" target='_blank'><i className="fa-brands fa-twitter footer__link-icon"></i></a>
             </div>
           </div>
           <div className='footer__last-div'>
