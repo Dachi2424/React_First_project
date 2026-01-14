@@ -9,10 +9,10 @@ function Second(){
 
   const heading = useIntersection({threshold: .5}, "second__move-up-animation");
   const paragraph = useIntersection({threshold: .3}, "second__move-up-animation");
-  const card1 = useIntersection({rootMargin: "40px"}, "second__move-up-animation");
-  const card2 = useIntersection({rootMargin: "40px"}, "second__move-up-animation");
-  const card3 = useIntersection({rootMargin: "40px"}, "second__move-up-animation");
-  const card4 = useIntersection({rootMargin: "40px"}, "second__move-up-animation");
+  const card1 = useIntersection({rootMargin: "90px"}, "second__move-up-animation");
+  const card2 = useIntersection({rootMargin: "90px"}, "second__move-up-animation");
+  const card3 = useIntersection({rootMargin: "90px"}, "second__move-up-animation");
+  const card4 = useIntersection({rootMargin: "90px"}, "second__move-up-animation");
   const card1Logo = useIntersection({threshold: 0}, "second__move-right-animation");
   const card2Logo = useIntersection({threshold: 0}, "second__move-right-animation");
   const card3Logo = useIntersection({threshold: 0}, "second__move-right-animation");

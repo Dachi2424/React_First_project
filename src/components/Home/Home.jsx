@@ -1,6 +1,7 @@
+import './Home.scss'
 import Hero from './Hero/Hero';
 import Second from './Second/Second';
-import './Home.scss'
+import Third from './Third/Third';
 
 
 function Home(){
@@ -8,6 +9,7 @@ function Home(){
     <>
       <Hero />
       <Second />
+      <Third />
     </>
   );
 }

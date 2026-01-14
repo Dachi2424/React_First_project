@@ -1,0 +1,92 @@
+
+@keyframes moveUp {
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (min-width: 300px) {
+  .third{
+    min-height: 100svh;
+    background-color: #141416;
+    &__main-container{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+    }
+    &__first-container{
+      background-image: url('../../../assets/homepage-third.avif');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__heading{
+      font-size: 20px;
+      font-family: poppins;
+      color: white;
+      font-weight: 400;
+      text-align: center;
+      width: 260px;
+
+      //animation styles
+      transform: translateY(200%);
+      opacity: 0;
+    }
+
+    &__second-container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      padding: 20px 20px 20px;
+    }
+    &__paragraph{
+      font-size: 14px;
+      color: #8a8a8a;
+      text-align: center;
+      line-height: 26px;
+      &--first{
+        transform: translateY(60%);
+        opacity: 0;
+      }
+      &--second{
+        transform: translateY(60%);
+        opacity: 0;
+      }
+    }
+    &__learn-button{
+      background-color: var(--secondary-color);
+      color: black;
+      border: 1px solid var(--secondary-color);
+      font-size: 14px;
+      border-radius: 5px;
+      padding: 14px 26px;
+      cursor: pointer;
+      transition: .4s;
+      transform: translateY(200%);
+      opacity: 0;
+      &:hover{
+        background-color: #141416;
+        border: 1px solid white;
+        color: white;
+        transition: .4s;
+      }
+    }
+
+
+
+
+    &__move-up-animation{
+      animation-name: moveUp;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-out;
+    }
+  }
+
+}

@@ -14,6 +14,7 @@
 
 @media screen and (min-width: 300px) {
   .second{
+    padding: 0 0 40px;
     background-color: #141416;
     &__main-container{
       width: 100%;
@@ -119,9 +120,9 @@
 
     &__move-up-animation{
       animation-name: moveUp;
-      animation-duration: 1s;
+      animation-duration: 1.2s;
       animation-fill-mode: forwards;
-      animation-timing-function: ease;
+      animation-timing-function: ease-out;
     }
   }
 }
@@ -154,7 +155,7 @@
 
 @media screen and (min-width: 1024px) {
   .second{
-    padding: 0 70px 0;
+    padding: 0 70px 100px;
     position: relative;
     &__main-container{
       background-color: #141416;
