@@ -6,6 +6,15 @@
   }
 }
 
+
+@keyframes moveRight {
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
 @media screen and (min-width: 300px) {
   .third{
     min-height: 100svh;
@@ -14,7 +23,6 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-
     }
     &__first-container{
       background-image: url('../../../assets/homepage-third.avif');
@@ -55,7 +63,7 @@
         opacity: 0;
       }
       &--second{
-        transform: translateY(60%);
+        transform: translateY(48%);
         opacity: 0;
       }
     }
@@ -68,7 +76,8 @@
       padding: 14px 26px;
       cursor: pointer;
       transition: .4s;
-      transform: translateY(200%);
+
+      transform: translateY(250%);
       opacity: 0;
       &:hover{
         background-color: #141416;
@@ -89,4 +98,88 @@
     }
   }
 
+}
+
+
+@media screen and (min-width: 600px) {
+  .third{
+    &__first-container{
+      height: 340px;
+    }
+    &__heading{
+      font-size: 24px;
+      width: 300px;
+    }
+    &__second-container{
+      padding: 30px 40px 30px;
+    }
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .third{
+    &__second-container{
+      padding: 50px 150px 50px;
+      align-items: flex-start;
+    }
+    &__paragraph{
+      text-align: start;
+    }
+  }
+}
+
+
+
+@media screen and (min-width: 1024px) {
+  .third{
+    min-height: unset;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 70px 10px;
+    &__main-container{
+      border: 1px solid #3F4349;
+      flex-direction: row;
+    }
+    &__first-container{
+      border-right: 1px solid #3F4349;
+      height: unset;
+      width: 50%;
+    }
+    &__heading{
+      font-size: 30px;
+      width: 375px;
+    }
+    &__second-container{
+      width: 50%;
+      padding: 100px 70px 100px;
+      overflow: hidden;
+    }
+    &__paragraph{
+      font-size: 16px;
+      &--first{
+        transform: translateX(-50%);
+      }
+      &--second{
+        transform: translateX(-50%);
+      }
+    }
+    &__learn-button{
+      transform: translateX(-120%);
+      font-size: 16px;
+    }
+
+
+
+
+
+    &__move-up-animation{
+      animation-name: moveRight;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-out;
+    }
+  }
 }
