@@ -8,20 +8,25 @@ function Hero(){
 
   useEffect(() => {
     if(window.innerWidth <= 768) return;
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const size = Math.min(120, 100 + scrollY * 0.01);
-      const position = Math.min(50, 30 + scrollY * 0.01)
 
-      if(heroRef.current){
-        heroRef.current.style.backgroundSize = `${size}%`;
-        heroRef.current.style.backgroundPositionY = `${position}%`
+    let ticking = false;
+
+    const handleScroll = () => {
+      if(!ticking){
+        window.requestAnimationFrame(() => {
+          const scrollY = window.scrollY;
+          const size = Math.min(120, 100 + scrollY * 0.01);
+          const position = Math.min(50, 30 + scrollY * 0.01);
+          if(heroRef.current){
+            heroRef.current.style.backgroundSize = `${size}%`;
+            heroRef.current.style.backgroundPositionY = `${position}%`
+          }
+          ticking = false
+        });
+        ticking = true
       }
-    
     };
 
-    
-    
     window.addEventListener("scroll", handleScroll);
 
     return () => {

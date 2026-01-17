@@ -43,7 +43,6 @@ function Stats(){
           const positionX = Math.min(300, -400 + scrollY * 0.12);
           if(imageRef.current){
             imageRef.current.style.backgroundPosition = `${positionX}px center`;
-            console.log(positionX);
           }
           ticking = false;
         });
