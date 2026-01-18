@@ -3,6 +3,7 @@ import Hero from './Hero/Hero';
 import Second from './Second/Second';
 import Third from './Third/Third';
 import Stats from './Stats/Stats';
+import Last from './Last/Last';
 
 
 function Home(){
@@ -12,6 +13,7 @@ function Home(){
       <Second />
       <Third />
       <Stats />
+      <Last />
     </>
   );
 }

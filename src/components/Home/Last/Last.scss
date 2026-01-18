@@ -1,0 +1,329 @@
+
+
+@keyframes moveUp {
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 300px) {
+  .last{
+    &__main-container{
+      width: 100%;
+    }
+    &__first-container{
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-auto-rows: 100px;
+    }
+    &__grid-child{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top: 1px solid #393D43;
+    }
+    &__heading{
+      color: white;
+      font-size: 20px;
+      font-family: poppins;
+      font-weight: 500;
+
+      //animation styles
+      transform: translateY(150%);
+      opacity: 0;
+    }
+    &__sponsor-image{
+      width: 30%;
+      height: 50px;
+      object-fit: contain;
+
+      //animation styles
+      transform: translateY(150%);
+      opacity: 0;
+    }
+
+
+    &__second-container{
+      width: 100%;
+      display: flex;
+      flex-direction: column;      
+    }
+    &__video-container{
+      position: relative;
+      background-image: linear-gradient(rgba(20, 20, 22, 0.9), rgba(20, 20, 22, 0.4)), url("../../../assets/homepage-fifth.avif");
+      height: 120svw;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__video-crop{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__video{
+      width: 90%;
+      mix-blend-mode: color-dodge;
+
+      //animation styles
+      transform: translateY(50%);
+      opacity: 0;
+    }
+
+    &__overlay-text-container{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+    }
+    &__overlay-text{
+      color: white;
+      font-weight: 500;
+      font-family: poppins;
+      font-size: 21px;
+      text-align: center;
+
+      //animation styles
+      transform: translateY(150%);
+      opacity: 0;
+    }
+    &__overlay-text-piece{
+      display: block;
+    }
+
+    &__content-container{
+      min-height: 45svh;
+      background-color: #141416;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+      padding: 20px 30px 20px;
+    }
+    &__paragraph{
+      color: #8a8a8a;
+      font-size: 16px;
+      line-height: 28px;
+      text-align: center;
+
+      //animation styles
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    &__start-button{
+      background-color: var(--secondary-color);
+      border: 1px solid var(--secondary-color);
+      color: black;
+      border-radius: 5px;
+      font-size: 16px;
+      padding: 14px 24px;
+      cursor: pointer;
+      transition: .4s;
+
+      //animation styles
+      transform: translateY(180%);
+      opacity: 0;
+      &:hover{
+        color: white;
+        background-color: transparent;
+        border: 1px solid white;
+        transition: .4s;
+      }
+    }
+
+
+
+
+    &__move-up-animation{
+      animation-name: moveUp;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-out;
+    }
+    
+  }
+}
+
+
+@media screen and (min-width: 520px) {
+  .last{
+    &__video-container{
+      position: relative;
+      background-image: linear-gradient(rgba(20, 20, 22, 0.9), rgba(20, 20, 22, 0.4)), url("../../../assets/homepage-fifth.avif");
+      height: 90svw;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__video-crop{
+      width: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__video{
+      width: 100%;
+      mix-blend-mode: color-dodge;
+
+      //animation styles
+      transform: translateY(50%);
+      opacity: 0;
+    }
+  }
+}
+
+
+
+@media screen and (min-width: 768px) {
+  .last{
+    &__first-container{
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: 140px;
+    }
+    &__grid-child{
+      border-top: unset;
+      border: 1px solid #393D43;
+      &--first{
+        grid-column: 1/ span 2;
+      }
+    }
+
+    &__second-container{
+      width: 100%;
+      display: flex;
+      flex-direction: row;  
+      border: 1px solid #393D43;    
+    }
+    &__video-container{
+      position: relative;
+      background-image: linear-gradient(rgba(20, 20, 22, 0.9), rgba(20, 20, 22, 0.4)), url("../../../assets/homepage-fifth.avif");
+      height: 60svw;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+      border-right: 1px solid #393D43;
+    }
+    &__video-crop{
+      width: 70%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__video{
+      width: 100%;
+      mix-blend-mode: color-dodge;
+    }
+    &__overlay-text{
+      font-size: 20px;
+    }
+
+    &__content-container{
+      width: 50%;
+    }
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .last{
+    padding: 0 70px 0;
+    &__main-container{
+      width: unset;
+    }
+    &__first-container{
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-auto-rows: 15vw;
+    }
+    &__grid-child{
+      border-top: unset;
+      border: 1px solid #393D43;
+      &--first{
+        grid-column: unset;
+      }
+    }
+    &__heading{
+      font-size: 24px;
+    }
+    &__heading-piece{
+      display: block;
+    }
+    &__sponsor-image{
+      width: 60%;
+      height: 60px;
+      object-fit: contain;
+    }
+    &__video-container{
+      height: 50vw;
+      width: unset;
+      flex: 3;
+      background-size: cover;
+      background-position: center;
+    }
+    &__overlay-text{
+      font-size: 24px;
+    }
+    &__content-container{
+      width: unset;
+      flex: 2;
+      padding: 20px 0px 20px;
+      align-items: flex-start;
+    }
+    &__paragraph{
+      margin-inline: 40px;
+      text-align: start;
+    }
+    &__start-button{
+      margin-left: 40px;
+    }
+  }
+}
+
+
+
+@media screen and (min-width: 1300px) {
+  .last{
+    &__heading{
+      font-size: 30px;
+    }
+    &__sponsor-image{
+      &--second{
+        height: 72px;
+      }
+    }
+    &__video-container{
+      height: 45vw;
+      width: unset;
+      flex: 3;
+      background-size: cover;
+      background-position: center;
+    }
+    &__video{
+      width: 90%;
+    }
+    &__overlay-text{
+      font-size: 30px;
+    }
+    
+    &__paragraph{
+      margin-inline: 120px;
+      text-align: start;
+    }
+    &__start-button{
+      margin-left: 120px;
+    }
+  }
+}

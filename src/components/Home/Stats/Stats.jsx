@@ -40,9 +40,11 @@ function Stats(){
       if (!ticking){
         window.requestAnimationFrame(() => {
           const scrollY = window.scrollY;
-          const positionX = Math.min(300, -400 + scrollY * 0.12);
+          const positionX = Math.max(-700, 400 - scrollY * 0.12);
+          
+          
           if(imageRef.current){
-            imageRef.current.style.backgroundPosition = `${positionX}px center`;
+            imageRef.current.style.backgroundPosition = `${positionX}px 65%`;
           }
           ticking = false;
         });
