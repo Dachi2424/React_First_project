@@ -1,7 +1,7 @@
 import './Header.scss'
 import Logo from '../../assets/logo.png'
 import { useRef } from 'react';
-import { NavLink } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 function Header(){
 
@@ -13,19 +13,48 @@ function Header(){
     menu.current.classList.remove('header__mobile-menu--active')
   }
 
+
+  //navigation logic
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavigate = (path) => {
+    if(window.innerWidth <= 768){
+      
+      hideMenu();
+      
+      setTimeout(() => {
+        navigate(path)
+      }, 200);
+
+    } else {
+      setTimeout(() => {
+        navigate(path)
+      }, 250)
+    }
+    
+
+    
+
+    
+  }
+
+  const isActive = (path) => location.pathname === path;
+
+
   return(
     <header className="header">
-      <div className="header__logo-container">
+      <div onClick={() => handleNavigate("/")} className="header__logo-container">
         <img className='header__logo-image' src={Logo} alt="" />
         <span className='header__logo-name'>VISTA.IO</span>
       </div>
       <div className='header__right-container'>
         <nav className='header__desktop-nav'>
           <ul className='header__desktop-ul'>
-            <li className='header__desktop-li'>Solutions</li>
-            <li className='header__desktop-li'>Vision</li>
-            <li className='header__desktop-li'>Programs</li>
-            <li className='header__desktop-li'>Blog</li>
+            <li className='header__desktop-li'><span onClick={() => handleNavigate("/solutions")} className={isActive("/solutions") ? "header__desktop-link header__desktop-link--active" : "header__desktop-link"}>Solutions</span></li>
+            <li className='header__desktop-li'><span onClick={() => handleNavigate("/vision")} className={isActive("/vision") ? "header__desktop-link header__desktop-link--active" : "header__desktop-link"}>Vision</span></li>
+            <li className='header__desktop-li'><span onClick={() => handleNavigate("/programs")} className={isActive("/programs") ? "header__desktop-link header__desktop-link--active" : "header__desktop-link"}>Programs</span></li>
+            <li className='header__desktop-li'><span onClick={() => handleNavigate("/blog")} className={isActive("/blog") ? "header__desktop-link header__desktop-link--active" : "header__desktop-link"}>Blog</span></li>
           </ul>
         </nav>
         <div className="header__login-container header__login-container--desktop">
@@ -43,10 +72,10 @@ function Header(){
         </div>
         <nav className='header__mobile-nav'>
           <ul className='header__mobile-ul'>
-            <li className='header__mobile-li'><NavLink to="/solutions" className={({isActive}) => isActive ? "header__mobile-link header__mobile-link--active" : "header__mobile-link"}>Solutions</NavLink></li>
-            <li className='header__mobile-li'><NavLink to="/vision" className={({isActive}) => isActive ? "header__mobile-link header__mobile-link--active" : "header__mobile-link"}>Vision</NavLink></li>
-            <li className='header__mobile-li'><NavLink to="/programs" className={({isActive}) => isActive ? "header__mobile-link header__mobile-link--active" : "header__mobile-link"}>Programs</NavLink></li>
-            <li className='header__mobile-li'><NavLink to="/blog" className={({isActive}) => isActive ? "header__mobile-link header__mobile-link--active" : "header__mobile-link"}>Blog</NavLink></li>
+            <li className='header__mobile-li'><span onClick={() => handleNavigate("/solutions")} className={isActive("/solutions") ? "header__mobile-link header__mobile-link--active" : "header__mobile-link"}>Solutions</span></li>
+            <li className='header__mobile-li'><span onClick={() => handleNavigate("/vision")} className={isActive("/vision") ? "header__mobile-link header__mobile-link--active" : "header__mobile-link"}>Vision</span></li>
+            <li className='header__mobile-li'><span onClick={() => handleNavigate("/programs")} className={isActive("/programs") ? "header__mobile-link header__mobile-link--active" : "header__mobile-link"}>Programs</span></li>
+            <li className='header__mobile-li'><span onClick={() => handleNavigate("/blog")} className={isActive("/blog") ? "header__mobile-link header__mobile-link--active" : "header__mobile-link"}>Blog</span></li>
           </ul>
         </nav>
       </div>

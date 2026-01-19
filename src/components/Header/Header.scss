@@ -197,6 +197,11 @@
       gap: 30px;
       margin-right: 20px;
     }
+    &__desktop-link{
+      &--active{
+        color: var(--secondary-color)
+      }
+    }
   }
 }
 

@@ -3,7 +3,7 @@ import "./Solutions.scss"
 
 function Solutions(){
   return (
-    <>
+    <section className="solutions">
     <h1>
       ASDFGHMJHGEWRHFG
     </h1>
@@ -31,7 +31,7 @@ function Solutions(){
     <h1>
       ASDFGHMJHGEWRHFG
     </h1>
-    </>
+    </section>
   );
 }
 

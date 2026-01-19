@@ -8,13 +8,13 @@ import Last from './Last/Last';
 
 function Home(){
   return(
-    <>
+    <main className='main'>
       <Hero />
       <Second />
       <Third />
       <Stats />
       <Last />
-    </>
+    </main>
   );
 }
 

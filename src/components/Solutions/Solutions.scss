@@ -1,0 +1,21 @@
+
+
+@keyframes fade-in {
+  to{
+    opacity: 1;
+  }
+}
+
+.solutions{
+  h1{
+    color: white;
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .solutions{
+    opacity: 0;
+    animation: fade-in 1s forwards ease;
+  }
+}
