@@ -1,6 +1,7 @@
 import './Header.scss'
 import Logo from '../../assets/logo.png'
 import { useRef } from 'react';
+import { NavLink } from 'react-router-dom';
 
 function Header(){
 
@@ -42,10 +43,10 @@ function Header(){
         </div>
         <nav className='header__mobile-nav'>
           <ul className='header__mobile-ul'>
-            <li className='header__mobile-li'>Solutions</li>
-            <li className='header__mobile-li'>Vision</li>
-            <li className='header__mobile-li'>Programs</li>
-            <li className='header__mobile-li'>Blog</li>
+            <li className='header__mobile-li'><NavLink to="/solutions" className={({isActive}) => isActive ? "header__mobile-link header__mobile-link--active" : "header__mobile-link"}>Solutions</NavLink></li>
+            <li className='header__mobile-li'><NavLink to="/vision" className={({isActive}) => isActive ? "header__mobile-link header__mobile-link--active" : "header__mobile-link"}>Vision</NavLink></li>
+            <li className='header__mobile-li'><NavLink to="/programs" className={({isActive}) => isActive ? "header__mobile-link header__mobile-link--active" : "header__mobile-link"}>Programs</NavLink></li>
+            <li className='header__mobile-li'><NavLink to="/blog" className={({isActive}) => isActive ? "header__mobile-link header__mobile-link--active" : "header__mobile-link"}>Blog</NavLink></li>
           </ul>
         </nav>
       </div>

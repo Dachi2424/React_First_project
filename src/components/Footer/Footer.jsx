@@ -33,14 +33,14 @@ function Footer(){
           <form className='footer__form'>
             <p className='footer__form-heading'>Subscribe to Our Newsletter</p>
             <div className='footer__input-container'>
-              <label className='footer__label'>Email*</label>
-              <input className='footer__input' type="email" />
+              <label className='footer__label' htmlFor="email">Email*</label>
+              <input className='footer__input' type="email" id="email" />
             </div>
             <div className='footer__checkbox-container'>
-              <input className='footer__checkbox' type="checkbox" />
-              <label className='footer__label'>Yes, subscribe me to your newsletter.*</label>
+              <input className='footer__checkbox' type="checkbox" id="newsletter"/>
+              <label className='footer__label' htmlFor='newsletter'>Yes, subscribe me to your newsletter.*</label>
             </div>
-            <button className='footer__submit-button'>Submit</button>
+            <button className='footer__submit-button' type='submit'>Submit</button>
           </form>
         </div>
         <div className='footer__grid-child footer__grid-child--last'>

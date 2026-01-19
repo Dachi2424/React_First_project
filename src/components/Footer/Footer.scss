@@ -103,7 +103,33 @@
       display: flex;
       align-self: flex-start;
       align-items: center;
-      gap: 5px;
+      gap: 10px;
+    }
+    &__label{
+      cursor: pointer;
+    }
+    &__checkbox{
+      appearance: none;
+      -webkit-appearance: none;
+      height: 18px;
+      width: 18px;
+      background-color: #141416;
+      border: 1px solid #8a8a8a;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &::after{
+        font-family: "Font Awesome 7 Free";
+        content: "\f00c";
+        font-weight: 900;
+        color: white;
+        display: none;
+        font-size: 12px;
+      }
+      &:checked:after{
+        display: unset;
+      }
     }
     &__submit-button{
       width: 100%;
